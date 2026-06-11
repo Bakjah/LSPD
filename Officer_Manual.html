@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LSPD Officer Manual — Los Santos Police Department</title>
+<title>LSPD Officer Manual Los Santos Police Department</title>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,7 +34,7 @@
     line-height: 1.65;
   }
 
-  /* ─── HEADER ─── */
+  /* â”€â”€â”€ HEADER â”€â”€â”€ */
   .site-header {
     background: linear-gradient(135deg, #070e1b 0%, var(--navy2) 60%, #0f1e3a 100%);
     border-bottom: 2px solid var(--amber);
@@ -113,7 +113,7 @@
     background: rgba(232,160,32,.06);
   }
 
-  /* ─── HERO BANNER ─── */
+  /* â”€â”€â”€ HERO BANNER â”€â”€â”€ */
   .hero {
     background: linear-gradient(180deg, #060d1a 0%, var(--navy2) 100%);
     border-bottom: 1px solid var(--border);
@@ -181,7 +181,7 @@
     margin: 20px auto;
   }
 
-  /* ─── LAYOUT ─── */
+  /* â”€â”€â”€ LAYOUT â”€â”€â”€ */
   .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -192,7 +192,7 @@
     align-items: start;
   }
 
-  /* ─── SIDEBAR / TOC ─── */
+  /* â”€â”€â”€ SIDEBAR / TOC â”€â”€â”€ */
   .toc {
     position: sticky;
     top: 82px;
@@ -239,15 +239,15 @@
   }
 
   .toc li a::before {
-    content: '›';
+    content: 'â€º';
     font-size: 1rem;
     opacity: .5;
   }
 
-  /* ─── MAIN CONTENT ─── */
+  /* â”€â”€â”€ MAIN CONTENT â”€â”€â”€ */
   .main { min-width: 0; }
 
-  /* ─── SECTION BLOCKS ─── */
+  /* â”€â”€â”€ SECTION BLOCKS â”€â”€â”€ */
   .section-block {
     margin-bottom: 40px;
     border: 1px solid var(--border);
@@ -290,7 +290,7 @@
     padding: 28px 28px;
   }
 
-  /* ─── RANK GRID ─── */
+  /* â”€â”€â”€ RANK GRID â”€â”€â”€ */
   .rank-tier {
     margin-bottom: 24px;
   }
@@ -356,7 +356,7 @@
     border-radius: 3px;
   }
 
-  /* ─── OFFICES ─── */
+  /* â”€â”€â”€ OFFICES â”€â”€â”€ */
   .office-card {
     background: var(--navy3);
     border: 1px solid var(--border);
@@ -396,7 +396,7 @@
     border: 1px solid var(--border);
   }
 
-  /* ─── RADIO TABLES ─── */
+  /* â”€â”€â”€ RADIO TABLES â”€â”€â”€ */
   .radio-table-wrap {
     overflow-x: auto;
     border-radius: 5px;
@@ -468,7 +468,7 @@
     font-style: italic;
   }
 
-  /* ─── PHONETIC TABLE ─── */
+  /* â”€â”€â”€ PHONETIC TABLE â”€â”€â”€ */
   .phonetic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -500,7 +500,7 @@
     margin-top: 3px;
   }
 
-  /* ─── FORCE LEVELS ─── */
+  /* â”€â”€â”€ FORCE LEVELS â”€â”€â”€ */
   .force-levels {
     display: flex;
     flex-direction: column;
@@ -559,7 +559,7 @@
     line-height: 1.6;
   }
 
-  /* ─── CALLOUT / EXAMPLE BOXES ─── */
+  /* â”€â”€â”€ CALLOUT / EXAMPLE BOXES â”€â”€â”€ */
   .callout {
     background: rgba(232,160,32,.07);
     border: 1px solid rgba(232,160,32,.3);
@@ -588,7 +588,7 @@
 
   .callout ul { padding-left: 18px; }
 
-  /* ─── BROADCAST SEQUENCE ─── */
+  /* â”€â”€â”€ BROADCAST SEQUENCE â”€â”€â”€ */
   .sequence-list {
     counter-reset: seq;
     list-style: none;
@@ -621,7 +621,7 @@
     margin-top: 2px;
   }
 
-  /* ─── SECTION SUB-HEADING ─── */
+  /* â”€â”€â”€ SECTION SUB-HEADING â”€â”€â”€ */
   .sub-heading {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
@@ -634,7 +634,7 @@
     border-bottom: 1px solid var(--border);
   }
 
-  /* ─── PROSE ─── */
+  /* â”€â”€â”€ PROSE â”€â”€â”€ */
   .prose p {
     font-size: 0.875rem;
     line-height: 1.75;
@@ -642,7 +642,7 @@
     margin-bottom: 14px;
   }
 
-  /* ─── FOOTER ─── */
+  /* â”€â”€â”€ FOOTER â”€â”€â”€ */
   .site-footer {
     background: var(--navy2);
     border-top: 2px solid var(--amber);
@@ -674,7 +674,7 @@
 
   .footer-sig strong { color: var(--white); }
 
-  /* ─── RESPONSIVE ─── */
+  /* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
   @media (max-width: 768px) {
     .container { grid-template-columns: 1fr; }
     .toc { position: static; }
@@ -682,7 +682,7 @@
     .phonetic-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
   }
 
-  /* ─── PHONETIC ENHANCED ─── */
+  /* â”€â”€â”€ PHONETIC ENHANCED â”€â”€â”€ */
   .phonetic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -743,7 +743,7 @@
 
   .phonetic-card:hover .phonetic-speak-icon { opacity: 1; }
 
-  /* ─── UNIT VEHICLES ─── */
+  /* â”€â”€â”€ UNIT VEHICLES â”€â”€â”€ */
   .unit-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -832,7 +832,7 @@
     border-radius: 3px;
   }
 
-  /* ─── SCROLLBAR ─── */
+  /* â”€â”€â”€ SCROLLBAR â”€â”€â”€ */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: var(--navy); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
@@ -841,7 +841,7 @@
 </head>
 <body>
 
-<!-- ═══ HEADER ═══ -->
+<!-- â•â•â• HEADER â•â•â• -->
 <header class="site-header">
   <div class="header-inner">
     <div class="badge-shield">LSPD</div>
@@ -859,17 +859,17 @@
   </div>
 </header>
 
-<!-- ═══ HERO ═══ -->
+<!-- â•â•â• HERO â•â•â• -->
 <section class="hero">
   <div class="hero-content">
     <p class="hero-eyebrow">Official Documentation</p>
     <h2>LSPD <span>Officer</span> Manual</h2>
     <div class="hero-divider"></div>
-    <p class="hero-sub">Recruitment &amp; Training Division — Office of Support Services</p>
+    <p class="hero-sub">Recruitment &amp; Training Division - Office of Support Services</p>
   </div>
 </section>
 
-<!-- ═══ BODY ═══ -->
+<!-- â•â•â• BODY â•â•â• -->
 <div class="container">
 
   <!-- SIDEBAR TOC -->
@@ -891,10 +891,10 @@
   <!-- MAIN -->
   <main class="main">
 
-    <!-- ── RANK STRUCTURES ── -->
+    <!-- â”€â”€ RANK STRUCTURES â”€â”€ -->
     <section id="ranks" class="section-block">
       <div class="section-head">
-        <div class="section-icon">★</div>
+        <div class="section-icon">â˜…</div>
         <h2>Rank Structures in LSPD</h2>
       </div>
       <div class="section-body">
@@ -931,7 +931,7 @@
             <div class="rank-item">
               <div class="rank-dot" style="background:#c97040;"></div>
               <div class="rank-name">Captain I, II, III</div>
-              <div class="rank-abbr">Cpt I–III</div>
+              <div class="rank-abbr">Cpt Iâ€“III</div>
             </div>
           </div>
         </div>
@@ -942,7 +942,7 @@
             <div class="rank-item">
               <div class="rank-dot supervisor"></div>
               <div class="rank-name">Lieutenant I, II</div>
-              <div class="rank-abbr">Lt I–II</div>
+              <div class="rank-abbr">Lt Iâ€“II</div>
             </div>
             <div class="rank-item">
               <div class="rank-dot supervisor"></div>
@@ -1007,47 +1007,47 @@
       </div>
     </section>
 
-    <!-- ── OFFICES & ASSIGNMENTS ── -->
+    <!-- â”€â”€ OFFICES & ASSIGNMENTS â”€â”€ -->
     <section id="offices" class="section-block">
       <div class="section-head">
-        <div class="section-icon">⊞</div>
+        <div class="section-icon">âŠž</div>
         <h2>Offices &amp; Assignments</h2>
       </div>
       <div class="section-body">
 
         <div class="office-card">
           <div class="office-title">Office of Operations</div>
-          <p>Bertanggung jawab atas operasional harian LSPD — tempat seluruh karier Police Officer bermula. Office of Operations mencakup Patrol Officer yang bertugas langsung di lapangan serta Area Detective yang membantu investigasi dan memberikan dukungan intelijen. Dipimpin oleh Deputy Chief ke atas, office ini memiliki dua bureau:</p>
+          <p>Bertanggung jawab atas operasional harian LSPD tempat seluruh karier Police Officer bermula. Office of Operations mencakup Patrol Officer yang bertugas langsung di lapangan serta Area Detective yang membantu investigasi dan memberikan dukungan intelijen. Dipimpin oleh Deputy Chief ke atas, office ini memiliki dua bureau:</p>
           <div class="org-tree">
 Office of Operations
-├── Central Bureau
-│   ├── Commanding Officer (Captain I–III)
-│   ├── Watch Commander (Sgt II – Lt)
-│   ├── Training Officer (P-III)
-│   ├── Patrol Officer (P-II)
-│   └── Probationary Officer (P-I)
-└── West Bureau
-    ├── Commanding Officer (Captain I–III)
-    ├── Watch Commander (Sgt II – Lt)
-    ├── Training Officer (P-III)
-    ├── Patrol Officer (P-II)
-    └── Probationary Officer (P-I)</div>
+â”œâ”€â”€ Central Bureau
+â”‚   â”œâ”€â”€ Commanding Officer (Captain Iâ€“III)
+â”‚   â”œâ”€â”€ Watch Commander (Sgt II â€“ Lt)
+â”‚   â”œâ”€â”€ Training Officer (P-III)
+â”‚   â”œâ”€â”€ Patrol Officer (P-II)
+â”‚   â””â”€â”€ Probationary Officer (P-I)
+â””â”€â”€ West Bureau
+    â”œâ”€â”€ Commanding Officer (Captain Iâ€“III)
+    â”œâ”€â”€ Watch Commander (Sgt II â€“ Lt)
+    â”œâ”€â”€ Training Officer (P-III)
+    â”œâ”€â”€ Patrol Officer (P-II)
+    â””â”€â”€ Probationary Officer (P-I)</div>
         </div>
 
         <div class="office-card">
           <div class="office-title">Office of Special Operations</div>
-          <p>Mengelola pengerahan unit khusus untuk situasi yang membutuhkan penanganan spesial — meliputi negosiasi, penangkapan tersangka berbahaya, serta investigasi organisasi kriminal terstruktur.</p>
+          <p>Mengelola pengerahan unit khusus untuk situasi yang membutuhkan penanganan spesial meliputi negosiasi, penangkapan tersangka berbahaya, serta investigasi organisasi kriminal terstruktur.</p>
           <div class="org-tree">
 Counter-Terrorism & Special Operations Bureau
-└── Metropolitan Division
-    ├── Platoon-D (SWAT)
-    └── Air Support Division
+â””â”€â”€ Metropolitan Division
+    â”œâ”€â”€ Platoon-D (SWAT)
+    â””â”€â”€ Air Support Division
 
 Detective Bureau
-└── Detective Support & Vice Division
-└── Gang Impact Team
-    ├── Gang Enforcement Details
-    └── Narcotics Enforcement Details</div>
+â””â”€â”€ Detective Support & Vice Division
+â””â”€â”€ Gang Impact Team
+    â”œâ”€â”€ Gang Enforcement Details
+    â””â”€â”€ Narcotics Enforcement Details</div>
         </div>
 
         <div class="office-card">
@@ -1059,18 +1059,18 @@ Detective Bureau
           <div class="office-title">Professional Standards Bureau</div>
           <p>Menegakkan kebijakan, prosedur, dan arahan internal LSPD sekaligus memfasilitasi penerimaan komplain dari masyarakat. Terdiri dari dua divisi:</p>
           <ul style="margin-top:8px; padding-left:18px; font-size:.875rem; line-height:1.9; color:var(--text);">
-            <li><strong style="color:var(--white);">Force Investigation Division</strong> — menginvestigasi setiap insiden yang melibatkan penggunaan deadly force atau cedera yang memerlukan penanganan medis.</li>
-            <li><strong style="color:var(--white);">Internal Affairs Division</strong> — menerima laporan komplain masyarakat dan mengevaluasi seluruh personel LSPD tanpa terkecuali.</li>
+            <li><strong style="color:var(--white);">Force Investigation Division</strong> menginvestigasi setiap insiden yang melibatkan penggunaan deadly force atau cedera yang memerlukan penanganan medis.</li>
+            <li><strong style="color:var(--white);">Internal Affairs Division</strong> menerima laporan komplain masyarakat dan mengevaluasi seluruh personel LSPD tanpa terkecuali.</li>
           </ul>
         </div>
 
       </div>
     </section>
 
-    <!-- ── LAPD UNIT VEHICLES ── -->
+    <!-- â”€â”€ LAPD UNIT VEHICLES â”€â”€ -->
     <section id="units" class="section-block">
       <div class="section-head">
-        <div class="section-icon">🚔</div>
+        <div class="section-icon">ðŸš”</div>
         <h2>LSPD Unit Vehicles</h2>
       </div>
       <div class="section-body">
@@ -1090,7 +1090,7 @@ Detective Bureau
             </div>
             <div class="unit-info">
               <div class="unit-name">Ford Explorer Police Interceptor</div>
-              <div class="unit-desc">Unit SUV patrol utama LSPD. AWD dengan mesin EcoBoost 3.0L — andalan patroli harian, Traffic Stop, dan Code Six. Dirancang untuk durabilitas tinggi dalam jam patroli panjang.</div>
+              <div class="unit-desc">Unit SUV patrol utama LSPD. AWD dengan mesin EcoBoost 3.0L andalan patroli harian, Traffic Stop, dan Code Six. Dirancang untuk durabilitas tinggi dalam jam patroli panjang.</div>
               <div class="unit-tags">
                 <span class="unit-tag">Patrol</span>
                 <span class="unit-tag">AWD</span>
@@ -1130,7 +1130,7 @@ Detective Bureau
             </div>
             <div class="unit-info">
               <div class="unit-name">Ford Crown Victoria P71</div>
-              <div class="unit-desc">Legenda patrol kendaraan polisi Amerika. Mesin V8 4.6L — andalan patrol LSPD selama beberapa dekade sebelum digantikan oleh unit modern. Masih ditemukan sebagai unit cadangan.</div>
+              <div class="unit-desc">Legenda patrol kendaraan polisi Amerika. Mesin V8 4.6L andalan patrol LSPD selama beberapa dekade sebelum digantikan oleh unit modern. Masih ditemukan sebagai unit cadangan.</div>
               <div class="unit-tags">
                 <span class="unit-tag">Classic Unit</span>
                 <span class="unit-tag">V8</span>
@@ -1168,7 +1168,7 @@ Detective Bureau
             </div>
             <div class="unit-info">
               <div class="unit-name">BMW R1250RT-P Police Motorcycle</div>
-              <div class="unit-desc">Unit motor LSPD untuk traffic enforcement, motorcycle escort, dan manuver di area padat. Lincah dan responsif — digunakan Traffic Division untuk penindakan pelanggaran lalu lintas.</div>
+              <div class="unit-desc">Unit motor LSPD untuk traffic enforcement, motorcycle escort, dan manuver di area padat. Lincah dan responsif digunakan Traffic Division untuk penindakan pelanggaran lalu lintas.</div>
               <div class="unit-tags">
                 <span class="unit-tag">Motor Unit</span>
                 <span class="unit-tag">Traffic</span>
@@ -1187,7 +1187,7 @@ Detective Bureau
               <span class="unit-badge">Tactical</span>
             </div>
             <div class="unit-info">
-              <div class="unit-name">Lenco BearCat — SWAT Armored Vehicle</div>
+              <div class="unit-name">Lenco BearCat SWAT Armored Vehicle</div>
               <div class="unit-desc">Kendaraan taktis lapis baja untuk Metropolitan Division / SWAT (Platoon-D). Dikerahkan pada situasi hostage rescue, barricade subject, dan counter-terrorism operations.</div>
               <div class="unit-tags">
                 <span class="unit-tag">SWAT</span>
@@ -1207,7 +1207,7 @@ Detective Bureau
               <span class="unit-badge">Air Support</span>
             </div>
             <div class="unit-info">
-              <div class="unit-name">Air Support Division — Airship Unit</div>
+              <div class="unit-name">Air Support Division Airship Unit</div>
               <div class="unit-desc">Unit helikopter LSPD untuk surveillance udara, mendukung pursuits, dan pencarian tersangka dari ketinggian. Diminta melalui radio saat situasi membutuhkan pandangan udara real-time.</div>
               <div class="unit-tags">
                 <span class="unit-tag">Airship</span>
@@ -1242,10 +1242,10 @@ Detective Bureau
       </div>
     </section>
 
-    <!-- ── RADIO TERMINOLOGY ── -->
+    <!-- â”€â”€ RADIO TERMINOLOGY â”€â”€ -->
     <section id="radio" class="section-block">
       <div class="section-head">
-        <div class="section-icon">📡</div>
+        <div class="section-icon">ðŸ“¡</div>
         <h2>Radio Terminology, Codes &amp; Crime Broadcasts</h2>
       </div>
       <div class="section-body">
@@ -1294,7 +1294,7 @@ Detective Bureau
             <tbody>
               <tr>
                 <td>Starting Patrol</td>
-                <td>Saat melapor mulai bertugas — baik berseragam maupun plainclothes — unit wajib melaporkan "Clear" beserta jam tugas yang sedang berjalan.</td>
+                <td>Saat melapor mulai bertugas baik berseragam maupun plainclothes unit wajib melaporkan "Clear" beserta jam tugas yang sedang berjalan.</td>
                 <td><span class="usage-tag">1A4, show us clear from the station.</span></td>
               </tr>
               <tr>
@@ -1339,13 +1339,13 @@ Detective Bureau
               </tr>
               <tr>
                 <td>Code Two</td>
-                <td>Panggilan urgen — harus segera dijawab. Lampu merah dan sirine tidak digunakan; seluruh aturan lalu lintas tetap berlaku. Hanya digunakan oleh control operator.</td>
-                <td><span class="na-tag">N/A — digunakan control operator saja</span></td>
+                <td>Panggilan urgen harus segera dijawab. Lampu merah dan sirine tidak digunakan; seluruh aturan lalu lintas tetap berlaku. Hanya digunakan oleh control operator.</td>
+                <td><span class="na-tag">N/A digunakan control operator saja</span></td>
               </tr>
               <tr>
                 <td>Code Three</td>
-                <td>Panggilan darurat — harus dijawab segera namun tetap dengan memperhatikan keselamatan. Hanya digunakan oleh control operator.</td>
-                <td><span class="na-tag">N/A — digunakan control operator saja</span></td>
+                <td>Panggilan darurat harus dijawab segera namun tetap dengan memperhatikan keselamatan. Hanya digunakan oleh control operator.</td>
+                <td><span class="na-tag">N/A digunakan control operator saja</span></td>
               </tr>
               <tr>
                 <td>Code Four</td>
@@ -1404,7 +1404,7 @@ Detective Bureau
               </tr>
               <tr>
                 <td>Code Twelve</td>
-                <td>Alarm palsu — tidak ada bukti perampokan atau pencurian, dan tampaknya disebabkan oleh kerusakan alat atau kesalahan pengguna.</td>
+                <td>Alarm palsu tidak ada bukti perampokan atau pencurian, dan tampaknya disebabkan oleh kerusakan alat atau kesalahan pengguna.</td>
                 <td><span class="usage-tag">1L5, Code Twelve at Downtown Vinewood Supermarket.</span></td>
               </tr>
               <tr>
@@ -1449,7 +1449,7 @@ Detective Bureau
               </tr>
               <tr>
                 <td>Code ninety-nine</td>
-                <td>Officer membutuhkan bantuan segera — digunakan ketika petugas menghadapi situasi mengancam jiwa, cedera serius, atau ancaman nyata terhadap keselamatan. Semua unit terdekat wajib merespons.</td>
+                <td>Officer membutuhkan bantuan segera digunakan ketika petugas menghadapi situasi mengancam jiwa, cedera serius, atau ancaman nyata terhadap keselamatan. Semua unit terdekat wajib merespons.</td>
                 <td><span class="usage-tag">STAFF-1, Code ninety-nine, officer needs help, shots fired, Westbound from Little Seoul.</span></td>
               </tr>
             </tbody>
@@ -1576,23 +1576,23 @@ Detective Bureau
           <div class="callout-label">Contoh Siaran</div>
           <p>"1A17, clear frequency for a Crime Broadcast."</p>
           <br>
-          <p>"1A17, armed robbery just occurred approximately 10 minutes ago on Clinton Avenue. The suspect was last seen running southbound on Vinewood Boulevard. The suspect is a male, 25–30 years of age, wearing a blue t-shirt and blue jeans. Weapon used was a .45 caliber stainless-steel semi-auto pistol. Property taken was $20 U.S. currency. Victim's name: Doe, John. KMA."</p>
+          <p>"1A17, armed robbery just occurred approximately 10 minutes ago on Clinton Avenue. The suspect was last seen running southbound on Vinewood Boulevard. The suspect is a male, 25â€“30 years of age, wearing a blue t-shirt and blue jeans. Weapon used was a .45 caliber stainless-steel semi-auto pistol. Property taken was $20 U.S. currency. Victim's name: Doe, John. KMA."</p>
         </div>
 
       </div>
     </section>
 
-    <!-- ── OFFICER SAFETY ── -->
+    <!-- â”€â”€ OFFICER SAFETY â”€â”€ -->
     <section id="safety" class="section-block">
       <div class="section-head">
-        <div class="section-icon">🛡</div>
+        <div class="section-icon">ðŸ›¡</div>
         <h2>Officer Safety</h2>
       </div>
       <div class="section-body">
 
         <div class="prose">
-          <p>Dalam menghadapi situasi apa pun, petugas wajib mengutamakan keselamatan diri, rekan, lalu masyarakat — sebelum melakukan tindakan. Dari traffic stop hingga penembak aktif, kewaspadaan dan pengamatan situasi adalah kunci. Saat menghadapi ancaman terhadap jiwa, posisikan diri di tempat aman, amati kondisi, kumpulkan informasi, dan rencanakan pendekatan. Jangan bergerak maju bila situasi belum dipahami sepenuhnya.</p>
-          <p>Setelah situasi terkendali atau kawasan perlu diamankan, pasang perimeter di sekitar area kejadian untuk mencegah warga sipil memasuki dan berpotensi merusak lokasi bukti. Gunakan barikade dan kendaraan patroli, atau tutup total jalan bila perlu. Pada situasi barricade, perimeter minimal 10–20 meter dari area aktif dengan jarak yang cukup di pintu masuk perimeter.</p>
+          <p>Dalam menghadapi situasi apa pun, petugas wajib mengutamakan keselamatan diri, rekan, lalu masyarakat sebelum melakukan tindakan. Dari traffic stop hingga penembak aktif, kewaspadaan dan pengamatan situasi adalah kunci. Saat menghadapi ancaman terhadap jiwa, posisikan diri di tempat aman, amati kondisi, kumpulkan informasi, dan rencanakan pendekatan. Jangan bergerak maju bila situasi belum dipahami sepenuhnya.</p>
+          <p>Setelah situasi terkendali atau kawasan perlu diamankan, pasang perimeter di sekitar area kejadian untuk mencegah warga sipil memasuki dan berpotensi merusak lokasi bukti. Gunakan barikade dan kendaraan patroli, atau tutup total jalan bila perlu. Pada situasi barricade, perimeter minimal 10â€“20 meter dari area aktif dengan jarak yang cukup di pintu masuk perimeter.</p>
           <p>Petugas perimeter yang ditanya masyarakat cukup menyampaikan bahwa ada situasi berbahaya sedang ditangani (tanpa detail yang dapat memicu kepanikan), dan meminta warga untuk menjaga jarak.</p>
         </div>
 
@@ -1603,7 +1603,7 @@ Detective Bureau
             <div class="force-number">5</div>
             <div class="force-info">
               <h4>Use of Deadly Force</h4>
-              <p>Pada situasi darurat yang mengancam jiwa, petugas dapat menembak tersangka tanpa menunggu perintah dari atasan — apabila benar-benar diperlukan. Jangan pernah menembak secara sembarangan tanpa konfirmasi situasi dan izin yang sesuai.</p>
+              <p>Pada situasi darurat yang mengancam jiwa, petugas dapat menembak tersangka tanpa menunggu perintah dari atasan apabila benar-benar diperlukan. Jangan pernah menembak secara sembarangan tanpa konfirmasi situasi dan izin yang sesuai.</p>
             </div>
           </div>
           <div class="force-level" data-lvl="4">
@@ -1617,7 +1617,7 @@ Detective Bureau
             <div class="force-number">3</div>
             <div class="force-info">
               <h4>Physical Confrontation</h4>
-              <p>Konfrontasi umumnya dapat diselesaikan dengan sekelompok petugas yang mengepung tersangka dan membawanya ke tanah — dengan atau tanpa senjata. Jangan membuka tembakan pada level ini.</p>
+              <p>Konfrontasi umumnya dapat diselesaikan dengan sekelompok petugas yang mengepung tersangka dan membawanya ke tanah dengan atau tanpa senjata. Jangan membuka tembakan pada level ini.</p>
             </div>
           </div>
           <div class="force-level" data-lvl="2">
@@ -1642,21 +1642,21 @@ Detective Bureau
   </main>
 </div>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- â•â•â• FOOTER â•â•â• -->
 <footer class="site-footer">
   <div class="footer-badge">Recruitment &amp; Training Division</div>
-  <div class="footer-sub">Office of Support Services — Los Santos Police Department</div>
+  <div class="footer-sub">Office of Support Services Los Santos Police Department</div>
   <div style="margin-top:12px; font-size:.78rem; color:var(--amber); letter-spacing:2px; font-family:'Rajdhani',sans-serif; font-weight:700;">
     TO PROTECT AND TO SERVE
   </div>
   <div class="footer-sig" style="margin-top:16px;">
-    Signed by <strong>Captain Calvin Stone</strong><br>
+    Signed by <strong>Chief of Police - Noah Anderson</strong><br>
     <span style="color:var(--muted);font-size:.78rem;">Commanding Officer, Recruitment &amp; Employment Division</span>
   </div>
 </footer>
 
 <script>
-  // ── Phonetic TTS ──
+  // â”€â”€ Phonetic TTS â”€â”€
   document.querySelectorAll('.phonetic-card').forEach(card => {
     card.addEventListener('click', () => {
       const word = card.dataset.word;
@@ -1675,22 +1675,27 @@ Detective Bureau
     });
   });
 
-  // ── Active TOC highlight on scroll ──
-  const headings = document.querySelectorAll('section[id]');
+  // â”€â”€ Active TOC highlight on scroll â”€â”€
+  const headings = document.querySelectorAll('[id]');
   const links = document.querySelectorAll('.toc a');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
+  function setActiveHeading() {
+    let current = null;
+    const scrollY = window.scrollY + 120;
+    headings.forEach(h => {
+      if (h.offsetTop <= scrollY) current = h;
     });
-  }, { rootMargin: '-20% 0px -70% 0px' });
+    links.forEach(l => l.classList.remove('active'));
+    if (current) {
+      const active = document.querySelector(`.toc a[href="#${current.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  }
 
-  headings.forEach(h => observer.observe(h));
+  window.addEventListener('scroll', setActiveHeading, { passive: true });
+  setActiveHeading();
 </script>
 
 </body>
 </html>
+
