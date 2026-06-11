@@ -14,8 +14,8 @@
     --navy3:   #172035;
     --panel:   #1a2540;
     --border:  #253352;
-    --amber:   #e8a020;
-    --amber2:  #f5bc48;
+    --amber:   #4a7fc1;
+    --amber2:  #fbbf24;
     --steel:   #8a9bc0;
     --text:    #cdd7ee;
     --muted:   #6a7b9e;
@@ -233,7 +233,7 @@
   }
 
   .toc li a::before {
-    content: 'â€º';
+    content: '›';
     font-size: 1rem;
     opacity: .5;
   }
@@ -345,9 +345,9 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
     color: var(--muted);
-    background: rgba(255,255,255,.04);
     padding: 2px 8px;
     border-radius: 3px;
+    padding-top: 6px;
   }
 
   /* â”€â”€â”€ OFFICES â”€â”€â”€ */
@@ -389,6 +389,15 @@
     border-radius: 4px;
     border: 1px solid var(--border);
   }
+
+  .org-tree {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
 
   /* â”€â”€â”€ RADIO TABLES â”€â”€â”€ */
   .radio-table-wrap {
@@ -899,17 +908,17 @@
             <div class="rank-item">
               <div class="rank-dot command"></div>
               <div class="rank-name">Chief of Police</div>
-              <div class="rank-abbr">CoP</div>
+              <div class="rank-abbr"><img src="img/rank/CoP.png" alt="CoP" width="50"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot command"></div>
               <div class="rank-name">Assistant Chief of Police</div>
-              <div class="rank-abbr">ACoP</div>
+              <div class="rank-abbr"><img src="img/rank/ACoP.png" alt="ACoP" width="38"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot command"></div>
               <div class="rank-name">Deputy Chief of Police</div>
-              <div class="rank-abbr">DCoP</div>
+              <div class="rank-abbr"><img src="img/rank/DCoP.png" alt="DCoP" width="26"></div>
             </div>
           </div>
         </div>
@@ -920,12 +929,12 @@
             <div class="rank-item">
               <div class="rank-dot" style="background:#c97040;"></div>
               <div class="rank-name">Commander</div>
-              <div class="rank-abbr">Cmdr</div>
+              <div class="rank-abbr"><img src="img/rank/Cmdr.png" alt="Cmdr" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot" style="background:#c97040;"></div>
               <div class="rank-name">Captain I, II, III</div>
-              <div class="rank-abbr">Cpt Iâ€“III</div>
+              <div class="rank-abbr"><img src="img/rank/Cpt.png" alt="Cpt" width="14"></div>
             </div>
           </div>
         </div>
@@ -936,17 +945,17 @@
             <div class="rank-item">
               <div class="rank-dot supervisor"></div>
               <div class="rank-name">Lieutenant I, II</div>
-              <div class="rank-abbr">Lt Iâ€“II</div>
+              <div class="rank-abbr"><img src="img/rank/Lt.png" alt="Lt" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot supervisor"></div>
               <div class="rank-name">Sergeant II</div>
-              <div class="rank-abbr">Sgt II</div>
+              <div class="rank-abbr"><img src="img/rank/Sgt2.png" alt="Sgt" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot supervisor"></div>
               <div class="rank-name">Sergeant I</div>
-              <div class="rank-abbr">Sgt I</div>
+              <div class="rank-abbr"><img src="img/rank/Sgt1.png" alt="Sgt" width="14"></div>
             </div>
           </div>
         </div>
@@ -957,17 +966,17 @@
             <div class="rank-item">
               <div class="rank-dot detective"></div>
               <div class="rank-name">Detective III</div>
-              <div class="rank-abbr">Det III</div>
+              <div class="rank-abbr"><img src="img/rank/DET3.png" alt="Det III" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot detective"></div>
               <div class="rank-name">Detective II</div>
-              <div class="rank-abbr">Det II</div>
+              <div class="rank-abbr"><img src="img/rank/DET2.png" alt="Det II" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot detective"></div>
               <div class="rank-name">Detective I</div>
-              <div class="rank-abbr">Det I</div>
+              <div class="rank-abbr"><img src="img/rank/DET1.png" alt="Det I" width="14"></div>
             </div>
           </div>
         </div>
@@ -978,22 +987,22 @@
             <div class="rank-item">
               <div class="rank-dot officer"></div>
               <div class="rank-name">Police Officer III+1</div>
-              <div class="rank-abbr">PO III+1</div>
+              <div class="rank-abbr"><img src="img/rank/PO3-1.png" alt="PO III+1" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot officer"></div>
               <div class="rank-name">Police Officer III</div>
-              <div class="rank-abbr">PO III</div>
+              <div class="rank-abbr"><img src="img/rank/PO3.png" alt="PO III" width="14"></div>
             </div>
             <div class="rank-item">
               <div class="rank-dot officer"></div>
               <div class="rank-name">Police Officer II</div>
-              <div class="rank-abbr">PO II</div>
+              <div class="rank-abbr">NO CHEVRONS</div>
             </div>
             <div class="rank-item">
               <div class="rank-dot officer"></div>
               <div class="rank-name">Police Officer I (Probationary)</div>
-              <div class="rank-abbr">PO I</div>
+              <div class="rank-abbr">NO CHEVRONS</div>
             </div>
           </div>
         </div>
@@ -1012,36 +1021,52 @@
         <div class="office-card">
           <div class="office-title">Office of Operations</div>
           <p>Bertanggung jawab atas operasional harian LSPD tempat seluruh karier Police Officer bermula. Office of Operations mencakup Patrol Officer yang bertugas langsung di lapangan serta Area Detective yang membantu investigasi dan memberikan dukungan intelijen. Dipimpin oleh Deputy Chief ke atas, office ini memiliki dua bureau:</p>
-          <div class="org-tree">
+          <pre class="org-tree">
 Office of Operations
-â”œâ”€â”€ Central Bureau
-â”‚   â”œâ”€â”€ Commanding Officer (Captain Iâ€“III)
-â”‚   â”œâ”€â”€ Watch Commander (Sgt II â€“ Lt)
-â”‚   â”œâ”€â”€ Training Officer (P-III)
-â”‚   â”œâ”€â”€ Patrol Officer (P-II)
-â”‚   â””â”€â”€ Probationary Officer (P-I)
-â””â”€â”€ West Bureau
-    â”œâ”€â”€ Commanding Officer (Captain Iâ€“III)
-    â”œâ”€â”€ Watch Commander (Sgt II â€“ Lt)
-    â”œâ”€â”€ Training Officer (P-III)
-    â”œâ”€â”€ Patrol Officer (P-II)
-    â””â”€â”€ Probationary Officer (P-I)</div>
+│
+├── Central Bureau
+│
+└── West Bureau
+</pre>
+<br>
+<p>
+Setiap Bureau dibagi menjadi beberapa Area yang bertanggung jawab atas wilayah kerjanya masing-masing. Setiap Area dipimpin dan diawasi oleh jajaran personel berikut:
+</p>
+<br>
+<pre class="org-tree">
+├── Commanding Officer & Assistant Commanding Officer
+│   └── Captain I – Captain III
+│
+├── Watch Commander & Assistant Watch Commander
+│   └── Sergeant II – Lieutenant
+│
+├── Training Officer
+│   └── Police Officer III
+│
+├── Patrol Officer
+│   └── Police Officer II
+│
+└── Probationary Officer
+    └── Police Officer I</pre>
         </div>
 
         <div class="office-card">
           <div class="office-title">Office of Special Operations</div>
           <p>Mengelola pengerahan unit khusus untuk situasi yang membutuhkan penanganan spesial meliputi negosiasi, penangkapan tersangka berbahaya, serta investigasi organisasi kriminal terstruktur.</p>
-          <div class="org-tree">
-Counter-Terrorism & Special Operations Bureau
-â””â”€â”€ Metropolitan Division
-    â”œâ”€â”€ Platoon-D (SWAT)
-    â””â”€â”€ Air Support Division
-
-Detective Bureau
-â””â”€â”€ Detective Support & Vice Division
-â””â”€â”€ Gang Impact Team
-    â”œâ”€â”€ Gang Enforcement Details
-    â””â”€â”€ Narcotics Enforcement Details</div>
+          <pre class="org-tree">
+Office of Special Operations
+│
+├── Counter-Terrorism &amp; Special Operations Bureau
+│   ├── Metropolitan Division
+│   │   └── Platoon-D (Special Weapons and Tactics)
+│   └── Air Support Division
+│
+└── Detective Bureau
+    ├── Detective Support &amp; Vice Division
+    └── Gang Impact Team
+        ├── Gang Enforcement Details
+        └── Narcotics Enforcement Details
+</pre>
         </div>
 
         <div class="office-card">
@@ -1077,9 +1102,7 @@ Detective Bureau
           <!-- Ford Explorer PI -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/LAPD_Ford_Explorer.jpg/640px-LAPD_Ford_Explorer.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&w=640'"
-                   alt="LAPD Ford Explorer Police Interceptor">
+              <img src="img/veh/fordx.png" alt="LAPD Ford Explorer Police Interceptor">
               <span class="unit-badge">Patrol SUV</span>
             </div>
             <div class="unit-info">
@@ -1097,9 +1120,7 @@ Detective Bureau
           <!-- Dodge Charger -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/LAPD_Dodge_Charger_2014.jpg/640px-LAPD_Dodge_Charger_2014.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/2533092/pexels-photo-2533092.jpeg?auto=compress&w=640'"
-                   alt="LAPD Dodge Charger patrol car">
+              <img src="img/veh/dodge.png" alt="LAPD Dodge Charger Pursuit">
               <span class="unit-badge">Patrol Sedan</span>
             </div>
             <div class="unit-info">
@@ -1117,9 +1138,7 @@ Detective Bureau
           <!-- Ford Crown Victoria -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LAPD_Ford_Crown_Victoria.jpg/640px-LAPD_Ford_Crown_Victoria.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/1004409/pexels-photo-1004409.jpeg?auto=compress&w=640'"
-                   alt="LAPD Ford Crown Victoria">
+              <img src="img/veh/fordc.png" alt="LAPD Ford Crown Victoria">
               <span class="unit-badge">Classic Patrol</span>
             </div>
             <div class="unit-info">
@@ -1136,9 +1155,7 @@ Detective Bureau
           <!-- Chevrolet Tahoe PPV -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/LAPD_Chevrolet_Tahoe.jpg/640px-LAPD_Chevrolet_Tahoe.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/3354555/pexels-photo-3354555.jpeg?auto=compress&w=640'"
-                   alt="LAPD Chevrolet Tahoe command vehicle">
+              <img src="img/veh/ppv.png" alt="LAPD Chevrolet Tahoe command vehicle">
               <span class="unit-badge">Command SUV</span>
             </div>
             <div class="unit-info">
@@ -1155,9 +1172,7 @@ Detective Bureau
           <!-- BMW Motorcycle -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/LAPD_motorcycle_unit.jpg/640px-LAPD_motorcycle_unit.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/2519374/pexels-photo-2519374.jpeg?auto=compress&w=640'"
-                   alt="LAPD Motor Unit BMW R1250RT">
+              <img src="img/veh/motor.png" alt="LAPD BMW Motorcycle">
               <span class="unit-badge">Motor Unit</span>
             </div>
             <div class="unit-info">
@@ -1175,9 +1190,7 @@ Detective Bureau
           <!-- SWAT / BearCat -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/LAPD_SWAT_BearCat.jpg/640px-LAPD_SWAT_BearCat.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/8369651/pexels-photo-8369651.jpeg?auto=compress&w=640'"
-                   alt="LAPD SWAT BearCat armored vehicle">
+              <img src="img/veh/swat.png" alt="LAPD SWAT BearCat armored vehicle">
               <span class="unit-badge">Tactical</span>
             </div>
             <div class="unit-info">
@@ -1195,9 +1208,7 @@ Detective Bureau
           <!-- LAPD Helicopter -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/LAPD_AS350B2.jpg/640px-LAPD_AS350B2.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/1093898/pexels-photo-1093898.jpeg?auto=compress&w=640'"
-                   alt="LAPD Air Support Division helicopter">
+              <img src="img/veh/heli.png" alt="LAPD Air Support Division helicopter">
               <span class="unit-badge">Air Support</span>
             </div>
             <div class="unit-info">
@@ -1215,9 +1226,7 @@ Detective Bureau
           <!-- Unmarked Detective -->
           <div class="unit-card">
             <div class="unit-img-wrap">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/LAPD_detective_vehicle.jpg/640px-LAPD_detective_vehicle.jpg"
-                   onerror="this.src='https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&w=640'"
-                   alt="LAPD Unmarked Detective Vehicle">
+              <img src="img/veh/unmark.png" alt="LAPD Unmarked Detective vehicle">
               <span class="unit-badge">Unmarked</span>
             </div>
             <div class="unit-info">
@@ -1245,6 +1254,34 @@ Detective Bureau
       <div class="section-body">
 
         <p class="sub-heading" id="phonetic">NATO Phonetic Alphabet</p>
+        <div class="office-card">
+          NATO Phonetic Alphabet
+
+NATO Phonetic Alphabet adalah sistem komunikasi internasional yang digunakan untuk mengeja huruf secara jelas melalui radio, telepon, atau komunikasi suara lainnya. Sistem ini dirancang untuk mengurangi kesalahan komunikasi akibat gangguan sinyal, kebisingan, aksen, atau pengucapan yang mirip antar huruf.
+<br>
+Fungsi NATO Phonetic Alphabet:
+<br>
+Memastikan informasi penting tersampaikan dengan akurat.
+<br>
+Mengurangi risiko salah dengar saat komunikasi radio.
+<br>
+Mempermudah pengejaan nama, kode unit, nomor kendaraan, plat nomor, dan informasi penting lainnya.
+<br>
+Menjadi standar komunikasi yang digunakan oleh militer, penerbangan, maritim, serta berbagai instansi penegak hukum di seluruh dunia.
+<br>
+<br>
+Cara Penggunaan:
+<br>
+Setiap huruf digantikan dengan kata tertentu saat diucapkan melalui radio.
+<br>
+<br>
+Contoh:
+<br>
+- ABC-123 -> Alpha Bravo Charlie One Two Three
+<br>
+- Dispatch, be advised, suspect vehicle plate
+Alpha Bravo Charlie One Two Three.
+        </div>
         <div class="phonetic-grid">
           <div class="phonetic-card"><div class="phonetic-letter">A</div><div class="phonetic-word">Alpha</div></div>
           <div class="phonetic-card"><div class="phonetic-letter">B</div><div class="phonetic-word">Bravo</div></div>
