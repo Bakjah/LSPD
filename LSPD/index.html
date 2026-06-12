@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LSPD — Los Santos Police Department</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #0a0f1a;
+    --ink2:      #111827;
+    --ink3:      #1a2438;
+    --panel:     #1e2d45;
+    --border:    #2a3a56;
+    --steel:     #4a7fc1;
+    --steel2:    #6b9de0;
+    --ice:       #8ab4f8;
+    --frost:     #c5d8f5;
+    --text:      #d6e4f0;
+    --muted:     #5a6e8a;
+    --white:     #eef4ff;
+    --gold:      #f59e0b;
+    --red:       #f87171;
+    --green:     #4ade80;
+    --yellow:    #fbbf24;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    background: linear-gradient(135deg, #06090f 0%, var(--ink2) 60%, #0e1829 100%);
+    border-bottom: 2px solid var(--steel);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 24px rgba(0,0,0,.6);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 24px;
+  }
+
+  .badge-shield {
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+
+  .header-title h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .header-title p {
+    font-size: 0.72rem;
+    color: var(--ice);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(180deg, #050810 0%, var(--ink2) 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 72px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 38px,
+      rgba(42,58,86,.25) 38px,
+      rgba(42,58,86,.25) 39px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 38px,
+      rgba(42,58,86,.15) 38px,
+      rgba(42,58,86,.15) 39px
+    );
+  }
+
+  .hero-content { position: relative; }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 12px;
+  }
+
+  .hero h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+
+  .hero h1 span { color: var(--ice); }
+
+  .hero-divider {
+    width: 80px;
+    height: 2px;
+    background: var(--steel);
+    margin: 24px auto;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+    color: var(--muted);
+    letter-spacing: 1px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ─── LAYOUT ─── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  .section-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--steel);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* ─── DOCUMENT GRID ─── */
+  .doc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .doc-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color .25s, transform .25s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doc-card:hover {
+    border-color: var(--steel);
+    transform: translateY(-4px);
+  }
+
+  .doc-card-head {
+    background: var(--ink2);
+    border-bottom: 2px solid var(--steel);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .doc-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--steel);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+
+  .doc-icon.gold { background: var(--gold); }
+  .doc-icon.red { background: var(--red); }
+  .doc-icon.green { background: var(--green); }
+
+  .doc-card-head h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .doc-card-body {
+    padding: 20px;
+    flex: 1;
+  }
+
+  .doc-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .doc-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .doc-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: var(--text);
+  }
+
+  .doc-meta-item span {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    color: var(--ice);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 70px;
+  }
+
+  .doc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--steel);
+    color: var(--ink);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background .2s;
+    margin-top: auto;
+  }
+
+  .doc-btn:hover {
+    background: var(--ice);
+  }
+
+  /* ─── INFO BANNER ─── */
+  .info-banner {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--steel);
+    border-radius: 6px;
+    padding: 24px 28px;
+    margin-bottom: 40px;
+  }
+
+  .info-banner-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ice);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .info-banner p {
+    font-size: 0.875rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ─── CONTACT SECTION ─── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .contact-card {
+    background: var(--ink3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    text-align: center;
+  }
+
+  .contact-card-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .contact-card-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--ice);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .contact-card-info {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    background: var(--ink2);
+    border-top: 2px solid var(--steel);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .footer-badge {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--steel);
+  }
+
+  .footer-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+
+  .footer-motto {
+    margin-top: 12px;
+    font-size: .78rem;
+    color: var(--steel);
+    letter-spacing: 2px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+  }
+
+  .footer-sig {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .footer-sig strong { color: var(--frost); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .doc-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--ink); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--steel); }
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="badge-shield"><img src="img/Logo.png" alt="badge" width="50" height="50"></div>
+    <div class="header-title">
+      <h1>Los Santos Police Department</h1>
+      <p>Dokumentasi Resmi — Negara Bagian San Andreas</p>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><img src="img/Badge.png" alt="badge" width="150" height="150"></div>
+    <p class="hero-eyebrow">Portal Resmi</p>
+    <h1>Los Santos <span>Police Department</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Departemen Kepolisian Los Santos — Kumpulan dokumen regulasi, panduan departemen, dan kode penal resmi.</p>
+  </div>
+</section>
+
+<!-- ═══ BODY ═══ -->
+<div class="container">
+
+  <!-- SECTION LABEL -->
+  <p class="section-label">Koleksi Dokumen</p>
+  <h2 class="section-title">Dokumentasi Resmi</h2>
+
+  <!-- DOCUMENT GRID -->
+  <div class="doc-grid">
+
+    <!-- CARD 1: Penal Code -->
+    <div class="doc-card">
+      <div class="doc-card-head">
+        <div class="doc-icon gold"><img src="img/Logo.png" alt="badge" style="width:24px;height:24px;object-fit:contain;"></div>
+        <h2>San Andreas<br>Penal Code 2026</h2>
+      </div>
+      <div class="doc-card-body">
+        <p class="doc-desc">
+          Kode penal resmi Negara Bagian San Andreas yang berisi seluruh regulasi hukum untuk penegakan hukum, termasuk pelanggaran lalu lintas, obat-obatan, senjata, dan kejahatan lainnya.
+        </p>
+        <div class="doc-meta">
+          <div class="doc-meta-item">
+            <span>Tahun</span> 2026
+          </div>
+          <div class="doc-meta-item">
+            <span>Sections</span> 10 Bagian
+          </div>
+          <div class="doc-meta-item">
+            <span>Bahasa</span> Indonesia
+          </div>
+        </div>
+        <a href="Penal_Code.html" class="doc-btn">
+          Buka Dokumen &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 2: Department Manual -->
+    <div class="doc-card">
+      <div class="doc-card-head">
+        <div class="doc-icon">☰</div>
+        <h2>LSPD Officer<br>Manual 2023</h2>
+      </div>
+      <div class="doc-card-body">
+        <p class="doc-desc">
+          Buku panduan resmi Departemen Kepolisian Los Santos yang berisi kebijakan, prosedur, standar perilaku, dan regulasi operasional untuk seluruh personel.
+        </p>
+        <div class="doc-meta">
+          <div class="doc-meta-item">
+            <span>Tahun</span> 2023
+          </div>
+          <div class="doc-meta-item">
+            <span>Volume</span> 5 Volume
+          </div>
+          <div class="doc-meta-item">
+            <span>Bahasa</span> English
+          </div>
+        </div>
+        <a href="Officer_Manual.html" class="doc-btn">
+          Buka Dokumen &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 3: Department Manual Bahasa -->
+    <div class="doc-card">
+      <div class="doc-card-head">
+        <div class="doc-icon green">☰</div>
+        <h2>Buku Panduan<br>Departemen</h2>
+      </div>
+      <div class="doc-card-body">
+        <p class="doc-desc">
+          Versi bahasa Indonesia dari buku panduan resmi Departemen Kepolisian Los Santos. Berisi kebijakan, prosedur, dan regulasi operasional dalam bahasa Indonesia.
+        </p>
+        <div class="doc-meta">
+          <div class="doc-meta-item">
+            <span>Tahun</span> 2023
+          </div>
+          <div class="doc-meta-item">
+            <span>Volume</span> 5 Volume
+          </div>
+          <div class="doc-meta-item">
+            <span>Bahasa</span> Indonesia
+          </div>
+        </div>
+        <a href="Departement_Manual.html" class="doc-btn">
+          Buka Dokumen &rarr;
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INFO BANNER -->
+  <div class="info-banner">
+    <div class="info-banner-title">Informasi Penting</div>
+    <p>Seluruh dokumen di atas adalah dokumentasi resmi dari Departemen Kepolisian Los Santos untuk roleplay di Zonix Community. Penggunaan, reproduksi, atau distribusi di luar konteks roleplay tidak diizinkan tanpa persetujuan dari pihak berwenang.</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <p class="section-label" style="margin-top:20px;">Kontak</p>
+  <h2 class="section-title" style="margin-bottom:24px;">Hubungi Kami</h2>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-card-icon"></div>
+      <div class="contact-card-title">Alamat</div>
+      <div class="contact-card-info">Mission Row Police Station<br>Los Santos, San Andreas</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-card-icon"></div>
+      <div class="contact-card-title">Kontak Darurat</div>
+      <div class="contact-card-info">Darurat: 911<br>LSPD Dispatch: 555</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-card-icon"></div>
+      <div class="contact-card-title">Jam Operasional</div>
+      <div class="contact-card-info">Senin — Jumat: 08.30 — 17.00<br>Weekend: Shifts 24/7</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="footer-badge">Los Santos Police Department</div>
+  <div class="footer-sub">Dokumentasi Resmi — Negara Bagian San Andreas</div>
+  <div class="footer-motto">To Protect and Serve</div>
+  <div class="footer-sig">
+    Dibuat oleh <strong>Noah Anderson</strong><br>
+    <span style="color:var(--muted);font-size:.78rem;">© 2023–2026 Los Santos Police Department</span>
+  </div>
+</footer>
+
+</body>
+</html>
